@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #F5F5F5;
+  --font-family-primary: Bai Jamjuree, sans-serif;
+  --font-family-secondary: Barlow, sans-serif;
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+header {
+  display: flex;
+  height: 6vh;
+  width: 100%;
+}
+
+header .brand {
+  display: flex;
+  width: 10%;
+  min-width: 70px;
+  height: auto;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+header .menu {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  position: relative;
+  width: 70%;
+  height: auto;
+}
+
+header .user {
+  display: flex;
+  width: 20%;
+  height: auto;
+  background-color: white;
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: center
+}
+
+.user ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.user li a {
+  color: black;
+}
+
