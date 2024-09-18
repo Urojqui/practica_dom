@@ -5,15 +5,27 @@ const header = document.createElement("header");
 //Logo de la marca
 const section1 = document.createElement("section");
 section1.classList.add("brand");
+
 const brandImg = document.createElement("img");
 section1.appendChild(brandImg);
-brandImg.src = "assets/Logos/svgexport-5.png";
+brandImg.src = "assets/Logos/nikelogo.png";
 brandImg.alt = "Logo de la marca";
 header.appendChild(section1);
 
 //Menú selección
 const section2 = document.createElement("section");
 section2.classList.add("menu");
+
+const ulMenu = document.createElement("ul");
+section2.appendChild(ulMenu); 
+
+const options = ["Novedades y destacados", "Hombre", "Mujer", "Niño/a", "Ofertas"];
+
+options.forEach((option) => {
+  const liOptions = document.createElement("li");
+  liOptions.textContent = option;
+  ulMenu.appendChild(liOptions);
+})
 
 header.appendChild(section2);
 
@@ -27,28 +39,42 @@ header.appendChild(navHeader);
 
 const icons = [
   {
-    icono: ["fa-solid","fa-magnifying-glass"],
+    icono: ["fa-solid", "fa-magnifying-glass"],
+    isSearch: true,
   },
   {
     icono: ["fa-regular", "fa-heart"],
+    isSearch: false,
   },
   {
     icono: ["fa-solid", "fa-cart-shopping"],
+    isSearch: false,
   },
 ];
 
-icons.forEach((icon) => {
+icons.forEach((icon, index) => {
   const liNav = document.createElement("li");
+  liNav.classList.add(`icon-${index + 1}`);
   ulNav.appendChild(liNav);
 
   const linkElement = document.createElement("a");
-  linkElement.href = "#"; 
-  liNav.appendChild(linkElement)
+  linkElement.href = "#";
+  linkElement.classList.add(`logo-${index + 1}`);
+  liNav.appendChild(linkElement);
 
   const iconSearch = document.createElement("i");
   linkElement.appendChild(iconSearch);
 
   iconSearch.classList.add(...icon.icono);
+
+  if (icon.isSearch) {
+    const inputSearch = document.createElement("input");
+    inputSearch.id = "text";
+    inputSearch.type = "text";
+    inputSearch.placeholder = "🔍  Buscar";
+    inputSearch.required = true;
+    liNav.appendChild(inputSearch);
+  }
 });
 
 document.body.appendChild(header);
