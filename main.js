@@ -93,7 +93,7 @@ document.body.appendChild(header);
 //MAIN
 const main = document.createElement("main");
 
-//MAIN - DIV INFORMATION
+//MAIN - DIV - INFORMATION
 const divInfo = document.createElement("div");
 divInfo.classList.add("information");
 main.appendChild(divInfo);
@@ -106,13 +106,13 @@ const information = [
   "Como Member, tienes envíos y devoluciones gratis en un plazo de 30 días en todos los pedidos. Obtén más información y únete",
 ];
 
-information.forEach((info) => {
-  const liInfo = document.createElement("li");
+information.forEach((info, index) => {
+  const liInfo = document.createElement("li");liInfo.classList.add(`inf-${index + 1}`);
   ulInfo.appendChild(liInfo);
   liInfo.innerText = info;
 });
 
-//MAIN - BACKGROUND
+//MAIN - DIV- BACKGROUND
 const imgMain = [
   {
     imagen:
@@ -130,14 +130,25 @@ imgMain.forEach((image) => {
   div.appendChild(img);
 });
 
+//MAIN - SECTION - TEXT
 const section3 = document.createElement("section");
 section3.classList.add("text");
 main.appendChild(section3);
 const h3 = document.createElement("h3");
+h3.innerText = "No limites tu energía"
+
 const paragraph = document.createElement("p");
+paragraph.innerText= "Corre con Pegasus";
+
+const paragraph1 = document.createElement("p");
+paragraph1.innerText= "Siente la reactividad y el retorno de energía de la espuma ReactX y la tecnología Air Zoom.";
+
 section3.appendChild(h3);
 section3.appendChild(paragraph);
+section3.appendChild(paragraph1);
 
+
+/*
 const section4 = document.createElement("section");
 section4.classList.add("carousel");
 main.appendChild(section4);
