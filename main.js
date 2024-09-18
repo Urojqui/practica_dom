@@ -1,8 +1,8 @@
 console.log("Hola!");
-//Header
+//HEADER
 const header = document.createElement("header");
 
-//Logo de la marca
+//HEADER -LOGO DE LA MARCA
 const section1 = document.createElement("section");
 section1.classList.add("brand");
 
@@ -12,24 +12,34 @@ brandImg.src = "assets/Logos/nikelogo.png";
 brandImg.alt = "Logo de la marca";
 header.appendChild(section1);
 
-//Menú selección
+//HEADER - MENÚ SELECCIÓN OPCIONES
 const section2 = document.createElement("section");
 section2.classList.add("menu");
 
 const ulMenu = document.createElement("ul");
-section2.appendChild(ulMenu); 
+section2.appendChild(ulMenu);
 
-const options = ["Novedades y destacados", "Hombre", "Mujer", "Niño/a", "Ofertas"];
+const options = [
+  "Novedades y destacados",
+  "Hombre",
+  "Mujer",
+  "Niño/a",
+  "Ofertas",
+];
 
 options.forEach((option) => {
   const liOptions = document.createElement("li");
-  liOptions.textContent = option;
   ulMenu.appendChild(liOptions);
-})
+
+  const linkElement = document.createElement("a");
+  linkElement.href = "#";
+  linkElement.innerText = option;
+  liOptions.appendChild(linkElement);
+});
 
 header.appendChild(section2);
 
-//Search - language - user
+//HEADER - SEARCH_FAV_SHOPPING CART
 const navHeader = document.createElement("nav");
 navHeader.classList.add("user");
 
@@ -57,13 +67,13 @@ icons.forEach((icon, index) => {
   liNav.classList.add(`icon-${index + 1}`);
   ulNav.appendChild(liNav);
 
-  const linkElement = document.createElement("a");
-  linkElement.href = "#";
-  linkElement.classList.add(`logo-${index + 1}`);
-  liNav.appendChild(linkElement);
+  const linkElement2 = document.createElement("a");
+  linkElement2.href = "#";
+  linkElement2.classList.add(`logo-${index + 1}`);
+  liNav.appendChild(linkElement2);
 
   const iconSearch = document.createElement("i");
-  linkElement.appendChild(iconSearch);
+  linkElement2.appendChild(iconSearch);
 
   iconSearch.classList.add(...icon.icono);
 
@@ -78,14 +88,47 @@ icons.forEach((icon, index) => {
 });
 
 document.body.appendChild(header);
+//FIN HEADER
 
-/*
-//Main
+//MAIN
 const main = document.createElement("main");
 
-const div = document.createElement("div");
-div.classList.add("img");
-main.appendChild(div);
+//MAIN - DIV INFORMATION
+const divInfo = document.createElement("div");
+divInfo.classList.add("information");
+main.appendChild(divInfo);
+
+const ulInfo = document.createElement("ul");
+divInfo.appendChild(ulInfo);
+
+const information = [
+  "Devoluciones y entregas gratuitas",
+  "Como Member, tienes envíos y devoluciones gratis en un plazo de 30 días en todos los pedidos. Obtén más información y únete",
+];
+
+information.forEach((info) => {
+  const liInfo = document.createElement("li");
+  ulInfo.appendChild(liInfo);
+  liInfo.innerText = info;
+});
+
+//MAIN - BACKGROUND
+const imgMain = [
+  {
+    imagen:
+      "https://static.nike.com/a/images/f_auto,cs_srgb/w_1920,c_limit/5fab8bfc-28e0-488f-8ee9-25e064774a69/image.jpg",
+  },
+];
+
+imgMain.forEach((image) => {
+  const div = document.createElement("div");
+  div.classList.add("background");
+  main.appendChild(div);
+
+  const img = document.createElement("img");
+  img.src = image.imagen;
+  div.appendChild(img);
+});
 
 const section3 = document.createElement("section");
 section3.classList.add("text");
@@ -97,7 +140,7 @@ section3.appendChild(paragraph);
 
 const section4 = document.createElement("section");
 section4.classList.add("carousel");
-main.appendChild(section4)
+main.appendChild(section4);
 const ulSection4 = document.createElement("ul");
 const liSection4 = document.createElement("li");
 /* section4.appendChild(ul);
