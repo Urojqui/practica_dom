@@ -239,7 +239,7 @@ sports.forEach((sport) => {
 document.body.appendChild(section4)
 
 
-/* const products = [
+ const products = [
   {
     name: "HP Essentials 255 G8 AMD",
     price: 289,
@@ -367,4 +367,4 @@ products.forEach((product) => {
 });
 
 document.body.appenChild(ul);
- */
+

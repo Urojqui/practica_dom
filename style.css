@@ -229,7 +229,13 @@ div .buttons{
   display: flex;
   overflow: scroll;
   list-style: none;
-  margin-top: 4px;
+  margin-top: 10px;
+  height: 345px;
+  overflow-y: hidden;
+}
+/* Ocultar barra scroll para carousel */
+.carousel ul::-webkit-scrollbar {
+  display: none;
 }
 
 .carousel ul li{
@@ -252,3 +258,4 @@ div .buttons{
   left: 48px;
   bottom:82px
 }
+
