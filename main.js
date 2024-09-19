@@ -115,8 +115,8 @@ information.forEach((info, index) => {
 //MAIN - DIV- BACKGROUND
 const imgMain = [
   {
-    imagen:
-      "https://static.nike.com/a/images/f_auto,cs_srgb/w_1920,c_limit/5fab8bfc-28e0-488f-8ee9-25e064774a69/image.jpg",
+    imagen: "assets/Video/Video nike.mov"
+      
   },
 ];
 
@@ -143,22 +143,101 @@ paragraph.innerText= "Corre con Pegasus";
 const paragraph1 = document.createElement("p");
 paragraph1.innerText= "Siente la reactividad y el retorno de energía de la espuma ReactX y la tecnología Air Zoom.";
 
+const buyButton = document.createElement("button");
+buyButton.innerText = "Comprar"
+buyButton.classList.add("buynow")
+
 section3.appendChild(h3);
 section3.appendChild(paragraph);
 section3.appendChild(paragraph1);
+section3.appendChild(buyButton);
 
+document.body.appendChild(main);
+//FIN MAIN
 
-/*
+//SECTION - CAROUSEL
 const section4 = document.createElement("section");
 section4.classList.add("carousel");
 main.appendChild(section4);
-const ulSection4 = document.createElement("ul");
-const liSection4 = document.createElement("li");
-/* section4.appendChild(ul);
-ulSection4.appendChild(li);
- */
 
-document.body.appendChild(main);
+//SECTION DIV - P - BUTTON
+const divButton = document.createElement("div");
+section4.appendChild(divButton);
+divButton.classList.add("sportfilter")
+
+const paragraph2 = document.createElement("p");
+paragraph2.innerText = "Filtrar por deporte"
+divButton.appendChild(paragraph2);
+
+const buttons = document.createElement("div");
+buttons.classList.add("buttons");
+divButton.appendChild(buttons)
+
+const button1 = document.createElement("button");
+
+buttons.appendChild(button1)
+
+const button2 = document.createElement("button");
+
+buttons.appendChild(button2)
+
+
+//SECTION - UL 
+const ulCarousel = document.createElement("ul")
+section4.appendChild(ulCarousel);
+
+const sports = [
+  {
+    img: "https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_440,c_limit/a3c971bc-bc0a-4c0c-8bdf-e807a3027e53/nike-just-do-it.jpg",
+    name: "Running",
+  },
+  {
+    img: "https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_440,c_limit/e4695209-3f23-4a05-a9f9-d0edde31b653/nike-just-do-it.jpg",
+    name: "Fútbol",
+  },
+  {
+    img: "https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_440,c_limit/38ed4b8e-9cfc-4e66-9ddd-02a52314eed9/nike-just-do-it.jpg",
+    name: "Baloncesto",
+  },
+  {
+    img: "https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_440,c_limit/e36a4a2b-4d3f-4d1c-bc75-d6057b7cec87/nike-just-do-it.jpg",
+    name: "Gym y training",
+  },
+  {
+    img: "https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_440,c_limit/7ce96f81-bf80-45b9-918e-f2534f14015d/nike-just-do-it.jpg",
+    name: "Tenis",
+  },
+  {
+    img: "https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_440,c_limit/6be55ac6-0243-42d6-87d0-a650074c658c/nike-just-do-it.jpg",
+    name: "Yoga",
+  },
+  {
+    img: "https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_440,c_limit/608705dc-dea5-4450-b68f-e624cf1ed2a7/nike-just-do-it.jpg",
+    name: "Skateboard",
+  },
+  {
+    img: "https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_440,c_limit/c779e4f6-7d91-46c3-9282-39155e0819e5/nike-just-do-it.jpg",
+    name: "Danza",
+  },
+]
+
+sports.forEach((sport) => {
+  const liSports = document.createElement("li");
+
+  const img2 = document.createElement("img");
+  img2.src = sport.img;
+
+  const names = document.createElement("a");
+  names.href = "#";
+  names.innerText = sport.name;
+
+  ulCarousel.appendChild(liSports);
+  liSports.appendChild(img2)
+  liSports.appendChild(names)
+})
+ 
+document.body.appendChild(section4)
+
 
 /* const products = [
   {

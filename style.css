@@ -6,15 +6,15 @@
 
 :root {
   --primary-color: #F5F5F5;
-  --font-family-primary: Bai Jamjuree, sans-serif;
-  --font-family-secondary: Barlow, sans-serif;
+  --font-family-primary: Arial, Helvetica, sans-serif;
+  --font-family-secondary: "Anton", sans-serif;
 }
 
 body {
   background-color: var(--primary-color);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-primary);
 }
-
+/* HEADER */
 header {
   display: flex;
   height: 60px;
@@ -126,6 +126,7 @@ li .logo-1{
   display: none;
 }
 
+/* MAIN */
 main .information {
   width: auto;
   height: 50px;
@@ -153,7 +154,7 @@ main ul .inf-2 {
 
 main .text{
   text-align: center;
-  height: 204px;
+  height: 260px;
   padding-top: 30px;
   position: relative;
 }
@@ -162,7 +163,7 @@ main .text h3{
   font-size: 70px;
   text-transform: uppercase;
   font-weight: 400;
-  font-family: "Anton", sans-serif;
+  font-family: var(--font-family-secondary);
   font-style: normal;
 }
 
@@ -171,4 +172,83 @@ main .text p {
   font-size: 20px;
   font-weight: 100;
   padding-bottom: 10px;
+}
+
+.text button {
+  background-color: #111111;
+  color: white;
+  height: 36px;
+  width: 97px;
+  border-radius: 30px;
+  border-style: none;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.text button:hover{
+  cursor: pointer;
+  background-color: #666565;
+  transition: 0.5s;
+}
+
+/* SECTION CAROUSEL */
+
+section .sportfilter {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 48px;
+}
+
+.sportfilter p {
+  font-size: 22px;
+}
+
+div .buttons{
+  padding-top: 6px;
+}
+
+.sportfilter button{
+  background-color: #CACACB;
+  height: 46px;
+  width: 46px;
+  border-radius: 50px;
+  border-style: none;
+  text-align: center;
+  font-size: 26px;
+  margin-left: 14px;
+}
+
+.carousel {
+  height: 407px;
+  padding: 2px 0 10px 48px;
+}
+
+.carousel ul {
+  display: flex;
+  overflow: scroll;
+  list-style: none;
+  margin-top: 4px;
+}
+
+.carousel ul li{
+  padding-left: 14px;
+}
+
+.carousel ul li:nth-child(1) {
+  padding-left: 0;
+}
+
+.carousel ul li a{
+  text-decoration: none;
+  color: black;
+  background-color: #FFFFFF;
+  height: 24px;
+  padding: 8px 16px 8px 16px;
+  border-radius: 30px;
+  font-size: 16px;
+  position: relative;
+  left: 48px;
+  bottom:82px
 }
