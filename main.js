@@ -107,7 +107,8 @@ const information = [
 ];
 
 information.forEach((info, index) => {
-  const liInfo = document.createElement("li");liInfo.classList.add(`inf-${index + 1}`);
+  const liInfo = document.createElement("li");
+  liInfo.classList.add(`inf-${index + 1}`);
   ulInfo.appendChild(liInfo);
   liInfo.innerText = info;
 });
@@ -115,8 +116,7 @@ information.forEach((info, index) => {
 //MAIN - DIV- BACKGROUND
 const imgMain = [
   {
-    imagen: "assets/Video/Video nike.mov"
-      
+    video: "assets/Video/Video nike.mov",
   },
 ];
 
@@ -126,7 +126,7 @@ imgMain.forEach((image) => {
   main.appendChild(div);
 
   const img = document.createElement("img");
-  img.src = image.imagen;
+  img.src = image.video;
   div.appendChild(img);
 });
 
@@ -135,17 +135,18 @@ const section3 = document.createElement("section");
 section3.classList.add("text");
 main.appendChild(section3);
 const h3 = document.createElement("h3");
-h3.innerText = "No limites tu energía"
+h3.innerText = "No limites tu energía";
 
 const paragraph = document.createElement("p");
-paragraph.innerText= "Corre con Pegasus";
+paragraph.innerText = "Corre con Pegasus";
 
 const paragraph1 = document.createElement("p");
-paragraph1.innerText= "Siente la reactividad y el retorno de energía de la espuma ReactX y la tecnología Air Zoom.";
+paragraph1.innerText =
+  "Siente la reactividad y el retorno de energía de la espuma ReactX y la tecnología Air Zoom.";
 
 const buyButton = document.createElement("button");
-buyButton.innerText = "Comprar"
-buyButton.classList.add("buynow")
+buyButton.innerText = "Comprar";
+buyButton.classList.add("buynow");
 
 section3.appendChild(h3);
 section3.appendChild(paragraph);
@@ -163,27 +164,26 @@ main.appendChild(section4);
 //SECTION DIV - P - BUTTON
 const divButton = document.createElement("div");
 section4.appendChild(divButton);
-divButton.classList.add("sportfilter")
+divButton.classList.add("sportfilter");
 
 const paragraph2 = document.createElement("p");
-paragraph2.innerText = "Filtrar por deporte"
+paragraph2.innerText = "Filtrar por deporte";
 divButton.appendChild(paragraph2);
 
 const buttons = document.createElement("div");
 buttons.classList.add("buttons");
-divButton.appendChild(buttons)
+divButton.appendChild(buttons);
 
 const button1 = document.createElement("button");
 
-buttons.appendChild(button1)
+buttons.appendChild(button1);
 
 const button2 = document.createElement("button");
 
-buttons.appendChild(button2)
+buttons.appendChild(button2);
 
-
-//SECTION - UL 
-const ulCarousel = document.createElement("ul")
+//SECTION - UL
+const ulCarousel = document.createElement("ul");
 section4.appendChild(ulCarousel);
 
 const sports = [
@@ -219,121 +219,124 @@ const sports = [
     img: "https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/w_440,c_limit/c779e4f6-7d91-46c3-9282-39155e0819e5/nike-just-do-it.jpg",
     name: "Danza",
   },
-]
+];
 
 sports.forEach((sport) => {
   const liSports = document.createElement("li");
 
   const img2 = document.createElement("img");
   img2.src = sport.img;
+  img2.alt = sport.name
 
   const names = document.createElement("a");
   names.href = "#";
   names.innerText = sport.name;
 
   ulCarousel.appendChild(liSports);
-  liSports.appendChild(img2)
-  liSports.appendChild(names)
-})
- 
-document.body.appendChild(section4)
+  liSports.appendChild(img2);
+  liSports.appendChild(names);
+});
+
+document.body.appendChild(section4);
 
 
- const products = [
+
+//SECTION .SPORTS
+
+const section5 = document.createElement("section");
+section5.classList.add("products");
+document.body.appendChild(section5);
+
+const paragraph3 = document.createElement("p");
+paragraph3.innerText = "Filtrar por deporte";
+section5.appendChild(paragraph3);
+
+const products = [
   {
-    name: "HP Essentials 255 G8 AMD",
-    price: 289,
-    stars: 4,
-    reviews: 250,
-    seller: "PcComponentes",
+    name: "Nike SB Dunk Low Pro",
+    color: "2 colores",
+    seller: "Nike",
+    price: "119,99€",
     image:
-      "https://thumb.pccomponentes.com/w-300-300/articles/1005/10057282/1639-hp-essential-255-g8-amd-3020e-8gb-256gb-ssd-156.jpg",
+    "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b371e4dd-4c8d-4a2d-9ba0-268af8492b6f/NIKE+SB+DUNK+LOW+PRO.png",
   },
 
   {
-    name: "HP Essentials 255 G8 AMD",
-    price: 300,
-    stars: 4.5,
-    reviews: 250,
-    seller: "PcComponentes",
+    name: "Nike SB Day One",
+    color: "1 color",
+    seller: "Nike",
+    price: "79,99€",
     image:
-      "https://thumb.pccomponentes.com/w-300-300/articles/1005/10057282/1639-hp-essential-255-g8-amd-3020e-8gb-256gb-ssd-156.jpg",
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b59665b1-d7db-4d0d-9bbb-72cd2c0a7159/NIKE+SB+DAY+ONE+%28GS%29.png",
   },
 
   {
-    name: "HP Essentials 255 G8 AMD",
-    price: 289,
-    stars: 4,
-    reviews: 250,
-    seller: "PcComponentes",
+    name: "Nike SB Zoom Janoski OG+",
+    color: "2 colores",
+    seller: "Nike",
+    price: "94,99€",
     image:
-      "https://thumb.pccomponentes.com/w-300-300/articles/1005/10057282/1639-hp-essential-255-g8-amd-3020e-8gb-256gb-ssd-156.jpg",
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/03c91279-e797-4cd7-879f-d082448a0c97/NIKE+SB+ZOOM+JANOSKI+OG%2B.png",
   },
 
   {
-    name: "HP Essentials 255 G8 AMD",
-    price: 289,
-    stars: 4,
-    reviews: 250,
-    seller: "PcComponentes",
+    name: "Nike SB Dunk Low Pro",
+    color: "3 colores",
+    seller: "Nike",
+    price: "119,99€",
     image:
-      "https://thumb.pccomponentes.com/w-300-300/articles/1005/10057282/1639-hp-essential-255-g8-amd-3020e-8gb-256gb-ssd-156.jpg",
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f570e56f-f2be-408f-a3a9-f53bbde6f062/NIKE+SB+DUNK+LOW+PRO.png",
   },
 
   {
-    name: "HP Essentials 255 G8 AMD",
-    price: 289,
-    stars: 4,
-    reviews: 250,
-    seller: "PcComponentes",
+    name: "Nike SB Malor",
+    color: "3 colores",
+    seller: "Nike",
+    price: "79,99€",
     image:
-      "https://thumb.pccomponentes.com/w-300-300/articles/1005/10057282/1639-hp-essential-255-g8-amd-3020e-8gb-256gb-ssd-156.jpg",
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/9cdc0994-92fc-481c-af17-1afb48e1c118/NIKE+SB+MALOR.png",
   },
 
   {
-    name: "HP Essentials 255 G8 AMD",
-    price: 289,
-    stars: 4,
-    reviews: 250,
-    seller: "PcComponentes",
+    name: "Nike SB Dunk Low Premium",
+    color: "1 color",
+    seller: "Nike",
+    price: "119,99€",
     image:
-      "https://thumb.pccomponentes.com/w-300-300/articles/1005/10057282/1639-hp-essential-255-g8-amd-3020e-8gb-256gb-ssd-156.jpg",
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/cd14f559-aa93-4875-8d08-b6cd1ee1ca21/NIKE+SB+DUNK+LOW+PRM.png",
   },
 
   {
-    name: "HP Essentials 255 G8 AMD",
-    price: 289,
-    stars: 4,
-    reviews: 250,
-    seller: "PcComponentes",
+    name: "Nike SB Day One",
+    color: "1 color",
+    seller: "Nike",
+    price: "79,99€",
     image:
-      "https://thumb.pccomponentes.com/w-300-300/articles/1005/10057282/1639-hp-essential-255-g8-amd-3020e-8gb-256gb-ssd-156.jpg",
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/08e4027a-625e-44f8-b883-b32946fb3dcc/NIKE+SB+DAY+ONE+%28GS%29.png",
   },
 
   {
-    name: "HP Essentials 255 G8 AMD",
-    price: 289,
-    stars: 4,
-    reviews: 250,
-    seller: "PcComponentes",
+    name: "Nike SB Zoom Janoski OG+ Electric",
+    color: "1 color",
+    seller: "Nike",
+    price: "99,99€",
     image:
-      "https://thumb.pccomponentes.com/w-300-300/articles/1005/10057282/1639-hp-essential-255-g8-amd-3020e-8gb-256gb-ssd-156.jpg",
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/29a881b7-30e8-414c-8064-a6450ace2ef4/NIKE+SB+ZOOM+JANOSKI+OG%2B.png",
   },
 
   {
-    name: "HP Essentials 255 G8 AMD",
-    price: 289,
-    stars: 4,
-    reviews: 250,
-    seller: "PcComponentes",
+    name: "Nike SB Force 58 Premium",
+    color: "1 color",
+    seller: "Nike",
+    price: "79,99€",
     image:
-      "https://thumb.pccomponentes.com/w-300-300/articles/1005/10057282/1639-hp-essential-255-g8-amd-3020e-8gb-256gb-ssd-156.jpg",
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/7564ab4b-8cd3-4f0c-a31f-1765f7a4f104/NIKE+SB+FORCE+58+PRM+L.png",
   },
 ];
 
 const ul = document.createElement("ul");
-ul.classList.add("products");
-document.body.appendChild(ul);
+ul.classList.add("shoes");
+section5.appendChild(ul);
 
 products.forEach((product) => {
   const li = document.createElement("li");
@@ -344,27 +347,23 @@ products.forEach((product) => {
   const price = document.createElement("p");
   price.innerText = product.price;
 
-  const stars = document.createElement("p");
-  stars.innerText = product.stars;
-
-  const reviews = document.createElement("p");
-  reviews.innerText = product.reviews;
+  const color = document.createElement("p");
+  color.innerText = product.color;
 
   const seller = document.createElement("p");
   seller.innerText = product.seller;
 
   const img = document.createElement("img");
   img.src = product.image;
+  img.alt = product.name
 
   li.appendChild(img);
   li.appendChild(h4);
-  li.appendChild(price);
-  li.appendChild(stars);
-  li.appendChild(reviews);
+  li.appendChild(color);
   li.appendChild(seller);
+  li.appendChild(price);
 
   ul.appendChild(li);
 });
 
 document.body.appenChild(ul);
-
