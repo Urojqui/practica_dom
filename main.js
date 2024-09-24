@@ -175,10 +175,12 @@ buttons.classList.add("buttons");
 divButton.appendChild(buttons);
 
 const button1 = document.createElement("button");
+button1.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
 
 buttons.appendChild(button1);
 
 const button2 = document.createElement("button");
+button2.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
 
 buttons.appendChild(button2);
 
@@ -226,7 +228,7 @@ sports.forEach((sport) => {
 
   const img2 = document.createElement("img");
   img2.src = sport.img;
-  img2.alt = sport.name
+  img2.alt = sport.name;
 
   const names = document.createElement("a");
   names.href = "#";
@@ -239,8 +241,6 @@ sports.forEach((sport) => {
 
 document.body.appendChild(section4);
 
-
-
 //SECTION .SPORTS
 
 const section5 = document.createElement("section");
@@ -248,7 +248,8 @@ section5.classList.add("products");
 document.body.appendChild(section5);
 
 const paragraph3 = document.createElement("p");
-paragraph3.innerText = "Filtrar por deporte";
+paragraph3.classList.add("exclusive");
+paragraph3.innerText = "Zapatillas Exclusivas";
 section5.appendChild(paragraph3);
 
 const products = [
@@ -258,7 +259,7 @@ const products = [
     seller: "Nike",
     price: "119,99€",
     image:
-    "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b371e4dd-4c8d-4a2d-9ba0-268af8492b6f/NIKE+SB+DUNK+LOW+PRO.png",
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b371e4dd-4c8d-4a2d-9ba0-268af8492b6f/NIKE+SB+DUNK+LOW+PRO.png",
   },
 
   {
@@ -355,7 +356,7 @@ products.forEach((product) => {
 
   const img = document.createElement("img");
   img.src = product.image;
-  img.alt = product.name
+  img.alt = product.name;
 
   li.appendChild(img);
   li.appendChild(h4);
