@@ -252,6 +252,31 @@ paragraph3.classList.add("exclusive");
 paragraph3.innerText = "Zapatillas Exclusivas";
 section5.appendChild(paragraph3);
 
+const filterOptions = document.createElement("ul");
+filterOptions.classList.add("filteroptions");
+section5.appendChild(filterOptions);
+
+const ulFilter = [
+  "Zapatillas",
+  "Partes de arriba",
+  "Pantalones cortos",
+  "Pantalones y Mallas",
+  "Accesorios y Equipamiento",
+  "Chaquetas y Chalecos",
+  "Sudaderas con y sin Capucha",
+  "Chándales",
+  "Compresión y capas base",
+  "Calcetines y Ropa interior",
+];
+
+ulFilter.forEach((filter) => {
+  const liFilter = document.createElement("li");
+  filterOptions.appendChild(liFilter);
+  liFilter.innerText = filter;  
+});
+
+document.body.appendChild(section5);
+
 const products = [
   {
     name: "Nike SB Dunk Low Pro",
