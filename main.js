@@ -257,16 +257,17 @@ filterOptions.classList.add("filteroptions");
 section5.appendChild(filterOptions);
 
 const ulFilter = [
-  "Zapatillas",
-  "Partes de arriba",
-  "Pantalones cortos",
-  "Pantalones y Mallas",
-  "Accesorios y Equipamiento",
-  "Chaquetas y Chalecos",
-  "Sudaderas con y sin Capucha",
-  "Chándales",
-  "Compresión y capas base",
-  "Calcetines y Ropa interior",
+  "Lifestyle",
+  "Baloncesto",
+  "Skateboard",
+  "Sexo (1)",
+  "Filtrar por precio",
+  "Descuentos y ofertas",
+  "Size",
+  "Color",
+  "Colecciones (1)",
+  "Alturas de las zapatillas",
+  "Deportes"
 ];
 
 ulFilter.forEach((filter) => {
@@ -357,6 +358,33 @@ const products = [
     price: "79,99€",
     image:
       "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/7564ab4b-8cd3-4f0c-a31f-1765f7a4f104/NIKE+SB+FORCE+58+PRM+L.png",
+  },
+
+  {
+    name: "Nike Dunk Low",
+    color: "2 colores",
+    seller: "Nike",
+    price: "119,99€",
+    image:
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/7b69dc5e-caf3-4425-b053-bb2efea296f7/W+NIKE+DUNK+LOW+NEXT+NATURE.png",
+  },
+
+  {
+    name: "Nike Dunk Low Retro SE",
+    color: "1 color",
+    seller: "Nike",
+    price: "129,99€",
+    image:
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a7fdc214-9aa7-453f-b2ea-17a84016d04b/NIKE+DUNK+LOW+RETRO+SE.png",
+  },
+
+  {
+    name: "Nike Dunk Low",
+    color: "1 color",
+    seller: "Nike",
+    price: "109,99€",
+    image:
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/5d95fbe4-5c2f-4bb0-b4b0-1711fa232281/NIKE+DUNK+LOW.png",
   },
 ];
 
