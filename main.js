@@ -475,3 +475,63 @@ section5.appendChild(ul);
 
 const footerElement = document.createElement("footer");
 document.body.appendChild(footerElement);
+
+const resources = document.createElement("ul");
+resources.classList.add("recursos")
+footerElement.appendChild(resources);
+
+const recursos = [
+  "Tarjetas de regalo",
+  "Buscar una tienda",
+  "Nike Journal",
+  "Hazte Member",
+  "Descuento para estudiantes",
+  "Comentarios",
+  "Códigos promocionales",
+];
+
+recursos.forEach((recurso) => {
+  const liResources = document.createElement("li");
+  liResources.innerText = recurso;
+  resources.appendChild(liResources);
+});
+
+const help = document.createElement("ul");
+help.classList.add("ayuda")
+footerElement.appendChild(help);
+
+const ayudas = [
+  "Obtener ayuda",
+  "Estado del pedido",
+  "Envíos y entregas",
+  "Devoluciones",
+  "Opciones de pago",
+  "Contacto",
+  "Evaluaciones",
+  "Ayuda con los códigos promocionales de Nike",
+]
+
+ayudas.forEach((ayuda) => {
+  const liHelp = document.createElement("li");
+  liHelp.innerText = ayuda;
+  help.appendChild(liHelp);
+});
+
+const company = document.createElement("ul");
+company.classList.add("ayuda")
+footerElement.appendChild(company);
+
+const empresas = [
+  "Acerca de Nike",
+  "Novedades",
+  "Empleo",
+  "Inversores",
+  "Sostenibilidad",
+  "Proposito",
+]
+
+empresas.forEach((empresa) => {
+  const liCompany = document.createElement("li");
+  liCompany.innerText = empresa;
+  company.appendChild(liCompany);
+});
