@@ -284,7 +284,7 @@ div .buttons i {
   display: grid;
   grid-template-columns: 15% 85%;
   /* grid-template-rows: 3% 97%; */
-  height: 900px;
+  height: 700px;
   padding: 0 48px 0 48px;
 }
 
@@ -322,20 +322,45 @@ section .exclusive {
   font-size: 20px;
   grid-row: 1 / 2;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .filteroptions {
   grid-column: 1 / 1;
+  overflow: scroll;
 }
 
-.filteroptions li {
+.filteroptions .options {
   list-style: none;
-  padding: 15px 20px 15px 0;
+  padding: 15px 0 15px 0;
+  margin-right: 20px;
   border-top: 0.5px solid #E5E5E5;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filteroptions .styles {
+  padding-bottom: 14px;
+}
+.filteroptions .styles:hover {
+  text-decoration: underline;
+}
+
+.filteroptions .styles:nth-child(7){
+  margin-bottom: 10px;
 }
 
 .filteroptions li:hover{
   cursor: pointer;
   color: #707072;
   transition: 1s;
+}
+
+
+footer{
+  height: 300px;
+  background-color: yellowgreen;
+  margin-top: 30px;
+  border-top: 1px solid #E5E5E5;
+  padding: 0 48px 0 48px;
 }

@@ -256,6 +256,23 @@ const filterOptions = document.createElement("ul");
 filterOptions.classList.add("filteroptions");
 section5.appendChild(filterOptions);
 
+const categories = [
+  "Air Force 1",
+  "Air Max",
+  "Nike Dunk",
+  "Nike V2K",
+  "Blazer",
+  "Jordan",
+  "Nike Vomero",
+];
+
+categories.forEach((category) => {
+  const liCategories = document.createElement("li");
+  filterOptions.appendChild(liCategories);
+  liCategories.classList.add("styles");
+  liCategories.innerText = category;
+});
+
 const ulFilter = [
   "Lifestyle",
   "Baloncesto",
@@ -267,13 +284,18 @@ const ulFilter = [
   "Color",
   "Colecciones (1)",
   "Alturas de las zapatillas",
-  "Deportes"
+  "Deportes",
 ];
 
 ulFilter.forEach((filter) => {
   const liFilter = document.createElement("li");
   filterOptions.appendChild(liFilter);
-  liFilter.innerText = filter;  
+  liFilter.classList.add("options")
+  liFilter.innerText = filter;
+
+  const icon = document.createElement("i");
+  icon.classList.add("fa-solid", "fa-chevron-down");
+  liFilter.appendChild(icon);
 });
 
 document.body.appendChild(section5);
@@ -386,6 +408,33 @@ const products = [
     image:
       "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/5d95fbe4-5c2f-4bb0-b4b0-1711fa232281/NIKE+DUNK+LOW.png",
   },
+
+  {
+    name: "Nike SB Dunk Low Pro",
+    color: "2 colores",
+    seller: "Nike",
+    price: "119,99€",
+    image:
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b371e4dd-4c8d-4a2d-9ba0-268af8492b6f/NIKE+SB+DUNK+LOW+PRO.png",
+  },
+
+  {
+    name: "Nike SB Dunk Low Premium",
+    color: "1 color",
+    seller: "Nike",
+    price: "119,99€",
+    image:
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/cd14f559-aa93-4875-8d08-b6cd1ee1ca21/NIKE+SB+DUNK+LOW+PRM.png",
+  },
+
+  {
+    name: "Nike SB Dunk Low Pro",
+    color: "3 colores",
+    seller: "Nike",
+    price: "119,99€",
+    image:
+      "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f570e56f-f2be-408f-a3a9-f53bbde6f062/NIKE+SB+DUNK+LOW+PRO.png",
+  },
 ];
 
 const ul = document.createElement("ul");
@@ -420,4 +469,9 @@ products.forEach((product) => {
   ul.appendChild(li);
 });
 
-document.body.appenChild(ul);
+section5.appendChild(ul);
+
+//FOOTER
+
+const footerElement = document.createElement("footer");
+document.body.appendChild(footerElement);
