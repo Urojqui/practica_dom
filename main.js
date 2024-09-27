@@ -1,4 +1,4 @@
-console.log("Hola!");
+
 //HEADER
 const header = document.createElement("header");
 
@@ -550,3 +550,31 @@ empresas.forEach((empresa) => {
   linkElement2.innerText = empresa;
   liCompany.appendChild(linkElement2);
 });
+
+const divFooter = document.createElement("div")
+footerElement.appendChild(divFooter);
+
+const ulFooter = document.createElement("ul");
+divFooter.appendChild(ulFooter);
+
+const footerList = [
+  "© 2024 Nike, Inc. Todos los derechos reservados",
+  "Guias",
+  "Términos de uso",
+  "Términos de venta",
+  "Aviso Legal",
+  "Política de privacidad y cookies",
+  "Configuración de privacidad y cookies",
+];
+
+footerList.forEach((list) => {
+  const liFooter = document.createElement("li");
+  ulFooter.appendChild(liFooter);
+
+  const linkElement3 = document.createElement("a");
+  linkElement3.href = "#";
+  linkElement3.innerText = list;
+  liFooter.appendChild(linkElement3);
+})
+
+//Crear clases para los li ayuda empresa recursos y poner en color negro, el resto en color gris

@@ -355,16 +355,31 @@ section .exclusive {
 }
 
 footer {
-  height: 380px;
+  height: 480px;
   margin-top: 80px;
   border-top: 1px solid #e5e5e5;
   padding: 20px 48px 0 48px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
-footer li {
+footer .recursos li {
   list-style: none;
-  padding: 15px 200px 0 0;
+  padding-top: 15px;
+  font-size: 14px;
+}
+
+footer .ayuda li {
+  list-style: none;
+  padding-top: 15px;
+  font-size: 14px;
+}
+
+footer .empresa li {
+  list-style: none;
+  padding-top: 15px;
+  font-size: 14px;
 }
 
 footer li:nth-child(1) {
@@ -373,6 +388,26 @@ footer li:nth-child(1) {
 }
 
 footer li a{
-  color: black;
+  color:black;
   text-decoration: none;
 }
+
+
+footer div ul{
+  flex-direction: row;
+  display: flex;
+}
+
+footer div li{
+  list-style: none;
+  font-size: 14px;
+  margin-right: 30px;
+  color: #707072;
+}
+
+footer div {
+  grid-column: 1 / 5;
+  margin-top: 80px;
+  padding-bottom: 40px;
+}
+ 
