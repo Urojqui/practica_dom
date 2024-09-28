@@ -52,6 +52,12 @@ const icons = [
     icono: ["fa-solid", "fa-magnifying-glass"],
     isSearch: true,
   },
+
+  {
+    icono: ["fa-solid", "fa-magnifying-glass"],
+    isSearch: false,
+  },
+
   {
     icono: ["fa-regular", "fa-user"],
     isSearch: false,
@@ -594,3 +600,7 @@ footerList.forEach((list) => {
 //añadir favicon
 
 //repasar como hacer appendchild de otra manera
+
+//Ajustar navbar
+
+//Ajustar padding footer
