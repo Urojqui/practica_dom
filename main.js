@@ -53,13 +53,25 @@ const icons = [
     isSearch: true,
   },
   {
+    icono: ["fa-regular", "fa-user"],
+    isSearch: false,
+  },
+
+  {
     icono: ["fa-regular", "fa-heart"],
     isSearch: false,
   },
+
   {
     icono: ["fa-solid", "fa-cart-shopping"],
     isSearch: false,
   },
+
+  {
+    icono: ["fa-solid", "fa-bars"],
+    isSearch: false,
+  },
+
 ];
 
 icons.forEach((icon, index) => {
@@ -578,3 +590,7 @@ footerList.forEach((list) => {
 })
 
 //Crear clases para los li ayuda empresa recursos y poner en color negro, el resto en color gris
+
+//añadir favicon
+
+//repasar como hacer appendchild de otra manera

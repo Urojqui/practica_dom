@@ -27,7 +27,7 @@ header .brand {
   min-width: 70px;
   height: auto;
   background-color: white;
-  padding-left: 45px;
+  padding-left: 48px;
 }
 
 .brand img {
@@ -128,16 +128,22 @@ li .logo-1 {
 /* MAIN */
 main .information {
   width: auto;
-  height: 50px;
-  background-color: var(--primary-color);
-  padding-top: 8px;
+  height: 60px;
+  background-color: var(--primary-color); 
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 main .background img {
   background-position: left;
   width: 100%;
   height: auto;
+}
+main .information ul{
+  list-style: none;
 }
 
 main ul .inf-1 {
@@ -236,7 +242,7 @@ div .buttons i {
   overflow: scroll;
   list-style: none;
   margin-top: 10px;
-  height: 345px;
+  height: 300px;
   overflow-y: hidden;
 }
 /* Ocultar barra scroll para carousel */
@@ -245,11 +251,11 @@ div .buttons i {
 }
 
 .carousel ul li {
-  padding-left: 14px;
+  margin-left: 14px;
 }
 
 .carousel ul li:nth-child(1) {
-  padding-left: 0;
+  margin-left: 0;
 }
 
 .carousel ul li a {
@@ -411,3 +417,98 @@ footer div {
   padding-bottom: 40px;
 }
  
+@media screen and (min-width: 375px) and (max-width: 800px) {
+
+  header{
+    background-color: white;
+  }
+
+  header .menu{
+    display: none;
+  }
+  
+  header .brand{
+    width: 30%;
+    padding-left: 10px;
+  }
+  
+  header .user{
+    width: 70%;
+  }
+  
+  .user .icon-3{
+    display: none;
+  } 
+
+  footer {
+    height: auto;
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer div{
+    margin-top: 10px;
+  }
+
+  footer ul{
+    margin-top: 15px;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  footer div ul{
+    flex-direction: column;
+  }
+  
+  footer div li {
+    margin-top: 10px;
+  }
+
+  main .text h3{
+    font-size: 50px;
+  }
+
+  main .text p {
+    font-size: 16px;
+  
+  }
+
+  .text button {
+    height: 28px;
+    width: 80px;
+    border-radius: 26px;
+    font-size: 14px;
+  }
+
+  .carousel ul li{
+    width: 300px;
+  }
+
+  .carousel img{
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+  }
+
+  .carousel ul li a {
+    height: 20px;
+    padding: 8px 16px 8px 16px;
+    border-radius: 26px;
+    font-size: 14px;
+    position: relative;
+    left: 32px;
+    bottom: 50px;
+  }
+
+}
+
+
+@media screen and (min-width: 800px) {
+.user .icon-5{
+  display: none;
+}
+
+.user .icon-2{
+  display: none;
+}
+}
