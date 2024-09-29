@@ -193,7 +193,7 @@ buttons.classList.add("buttons");
 divButton.appendChild(buttons);
 
 const button1 = document.createElement("button");
-button1.innerHTML = '<i class="fa-solid fa-arrow-left"></i>'; 
+button1.innerHTML = '<i class="fa-solid fa-chevron-left"></i>'; 
 
 
 buttons.appendChild(button1); 
