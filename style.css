@@ -124,6 +124,7 @@ li .logo-1 {
 }
 
 /* MAIN */
+
 main .information {
   width: auto;
   height: 60px;
@@ -212,7 +213,6 @@ div .buttons {
 
 div .buttons i {
   cursor: pointer;
-  font-weight: 100;
 }
 
 .sportfilter button {
@@ -225,6 +225,7 @@ div .buttons i {
   font-size: 24px;
   margin-left: 14px;
 }
+
 .sportfilter button:hover {
   background-color: #cacacb;
   transition: 0.5s;
