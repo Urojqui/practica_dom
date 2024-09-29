@@ -193,9 +193,10 @@ buttons.classList.add("buttons");
 divButton.appendChild(buttons);
 
 const button1 = document.createElement("button");
-button1.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
+button1.innerHTML = '<i class="fa-solid fa-arrow-left"></i>'; 
 
-buttons.appendChild(button1);
+
+buttons.appendChild(button1); 
 
 const button2 = document.createElement("button");
 button2.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
@@ -269,6 +270,11 @@ const paragraph3 = document.createElement("p");
 paragraph3.classList.add("exclusive");
 paragraph3.innerText = "Zapatillas Exclusivas";
 section5.appendChild(paragraph3);
+
+const paragraphfilter = document.createElement("p");
+paragraphfilter.classList.add("exclusivefilter");
+paragraphfilter.innerHTML = 'Filtro <i class="fa-solid fa-sliders"></i>';
+section5.appendChild(paragraphfilter);
 
 const filterOptions = document.createElement("ul");
 filterOptions.classList.add("filteroptions");
@@ -594,13 +600,3 @@ footerList.forEach((list) => {
   linkElement3.innerText = list;
   liFooter.appendChild(linkElement3);
 })
-
-//Crear clases para los li ayuda empresa recursos y poner en color negro, el resto en color gris
-
-//añadir favicon
-
-//repasar como hacer appendchild de otra manera
-
-//Ajustar navbar
-
-//Ajustar padding footer
