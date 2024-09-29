@@ -155,7 +155,7 @@ main ul .inf-2 {
 
 main .text {
   text-align: center;
-  height: 260px;
+  height: auto;
   padding-top: 30px;
   position: relative;
 }
