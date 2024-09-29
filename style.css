@@ -158,6 +158,7 @@ main .text {
   height: auto;
   padding-top: 30px;
   position: relative;
+  margin-bottom: 10px;
 }
 
 main .text h3 {
