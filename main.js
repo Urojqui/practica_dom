@@ -193,16 +193,25 @@ buttons.classList.add("buttons");
 divButton.appendChild(buttons);
 
 const button1 = document.createElement("button");
-button1.classList.add("button");
+button1.setAttribute("id","button1");
 button1.innerHTML = '<i class="fa-solid fa-chevron-left"></i>'; 
 buttons.appendChild(button1); 
 
+let handleClick = function(event) {
+  console.log(event);
+}
+document.getElementById("button1").addEventListener("click", handleClick);
 
 
 const button2 = document.createElement("button");
 button2.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
-
+button2.setAttribute("id","button2");
 buttons.appendChild(button2);
+
+let handleClick2 = function(event) {
+
+}
+document.getElementById("button2").addEventListener("click", handleClick);
 
 //SECTION - UL
 const ulCarousel = document.createElement("ul");
@@ -466,6 +475,10 @@ const ul = document.createElement("ul");
 ul.classList.add("shoes");
 section5.appendChild(ul);
 
+function handleMouseOver(event) {
+  console.log("Mouse sobre el producto:", event.currentTarget.querySelector("h4").innerText);
+}
+
 products.forEach((product) => {
   const li = document.createElement("li");
 
@@ -491,10 +504,13 @@ products.forEach((product) => {
   li.appendChild(seller);
   li.appendChild(price);
 
+  li.addEventListener("mouseover", handleMouseOver);
+
   ul.appendChild(li);
 });
 
 section5.appendChild(ul);
+
 
 //FOOTER
 

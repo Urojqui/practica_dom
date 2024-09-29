@@ -302,7 +302,7 @@ section .exclusivefilter i{
 
 .shoes li img:hover {
   cursor: pointer;
-}
+} 
 
 .products {
   display: grid;
