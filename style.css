@@ -135,6 +135,10 @@ main .information {
   justify-content: center;
 }
 
+main .information:hover{
+  cursor: pointer;
+}
+
 main .background img {
   background-position: left;
   width: 100%;
@@ -302,7 +306,7 @@ section .exclusivefilter i{
 }
 
 .shoes li img:hover {
-  cursor: pointer;
+  cursor:pointer;
 } 
 
 .products {
@@ -438,6 +442,10 @@ footer div {
 
 footer div ul li:nth-child(1) {
   margin-bottom: 15px;
+}
+
+footer div li:hover{
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 375px) and (max-width: 859px) {
