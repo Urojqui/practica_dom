@@ -144,10 +144,12 @@ imgMain.forEach((image) => {
   div.classList.add("background");
   main.appendChild(div);
 
-  const img = document.createElement("img");
-  img.src = image.video;
-  div.appendChild(img);
-});
+  const video = document.createElement("video");
+  video.src = image.video;
+  div.appendChild(video);
+}); 
+
+
 
 //MAIN - SECTION - TEXT
 const section3 = document.createElement("section");
