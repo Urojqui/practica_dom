@@ -134,7 +134,7 @@ information.forEach((info, index) => {
 //MAIN - DIV- BACKGROUND
 const imgMain = [
   {
-    video: "assets/Video/Video nike.mov",
+    video: "assets/Video/Video.mp4",
   },
 ];
 
