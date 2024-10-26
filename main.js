@@ -121,14 +121,15 @@ divInfo.appendChild(ulInfo);
 
 const information = [
   "Devoluciones y entregas gratuitas",
-  "Como Member, tienes envíos y devoluciones gratis en un plazo de 30 días en todos los pedidos. Obtén más información y únete",
+  'Como Member, tienes envíos y devoluciones gratis en un plazo de 30 días en todos los pedidos.  <span class="highlight">Obtén más información y únete</span>',
 ];
+
 
 information.forEach((info, index) => {
   const liInfo = document.createElement("li");
   liInfo.classList.add(`inf-${index + 1}`);
   ulInfo.appendChild(liInfo);
-  liInfo.innerText = info;
+  liInfo.innerHTML = info; // Usa innerHTML para interpretar el HTML
 });
 
 //MAIN - DIV- BACKGROUND

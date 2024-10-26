@@ -198,6 +198,10 @@ main .text p {
   transition: 0.5s;
 }
 
+.highlight {
+  font-weight: bold;
+}
+
 /* SECTION CAROUSEL */
 
 section .sportfilter {
