@@ -139,8 +139,7 @@ main .information:hover{
   cursor: pointer;
 }
 
-main .background video {
-  background-position: left;
+main .background img {
   width: 100%;
   height: auto;
 }

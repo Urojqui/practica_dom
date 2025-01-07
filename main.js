@@ -135,7 +135,7 @@ information.forEach((info, index) => {
 //MAIN - DIV- BACKGROUND
 const imgMain = [
   {
-    video: "assets/Video/Video.mp4",
+    img: "https://static.nike.com/a/images/f_auto/dpr_1.0,cs_srgb/h_3528,c_limit/b64f632f-2ba2-4766-9c80-c6868a2f5d72/nike-para-ni%C3%B1o-a.jpg",
   },
 ];
 
@@ -144,9 +144,9 @@ imgMain.forEach((image) => {
   div.classList.add("background");
   main.appendChild(div);
 
-  const video = document.createElement("video");
-  video.src = image.video;
-  div.appendChild(video);
+  const img = document.createElement("img");
+  img.src = image.img;
+  div.appendChild(img);
 }); 
 
 
@@ -156,14 +156,14 @@ const section3 = document.createElement("section");
 section3.classList.add("text");
 main.appendChild(section3);
 const h3 = document.createElement("h3");
-h3.innerText = "No limites tu energía";
+h3.innerText = "Regala Deporte y Estilo";
 
 const paragraph = document.createElement("p");
-paragraph.innerText = "Corre con Pegasus";
+paragraph.innerText = "Impulsa la moda y el deporte con los regalos perfectos.";
 
 const paragraph1 = document.createElement("p");
 paragraph1.innerText =
-  "Siente la reactividad y el retorno de energía de la espuma ReactX y la tecnología Air Zoom.";
+  "Siente el beneficio de latecnología y el diseño de Nike en tus pies.";
 
 const buyButton = document.createElement("button");
 buyButton.innerText = "Comprar";
